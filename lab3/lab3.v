@@ -12,8 +12,13 @@ module lab3(CLK, RESET, ENABLE, TIME, MIN, TENSEC, SEC, DECISEC, CENTISEC);
 
 
   // ADD YOUR CODE BELOW THIS LINE
-
-
+  tcounter tcnt (
+    .CLK(CLK),
+    .CLR(~RESET),
+    .ENP(ENABLE),
+    .ENT(1'b1),
+    .Q(CENTISEC)
+  );
   // ADD YOUR CODE ABOVE THIS LINE
 
   assign TIME = {MIN, TENSEC, SEC, DECISEC, CENTISEC};
