@@ -9,7 +9,7 @@
  input             RESET;
  input      [3:0]  IN;
 
- output reg [3:0]  OUT;
+ output     [3:0]  OUT;
 
  localparam    nbits = 4;
 
